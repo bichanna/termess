@@ -4,6 +4,7 @@ use crossterm::{
     style::{Color, SetBackgroundColor, SetForegroundColor},
     ExecutableCommand,
 };
+use enigo::*;
 use once_cell::sync::Lazy;
 use rand::{rngs::ThreadRng, seq::SliceRandom, Rng};
 
@@ -40,6 +41,9 @@ fn get_random_color(rng: &mut ThreadRng) -> Color {
 
 fn main() -> std::io::Result<()> {
     let mut rng = rand::thread_rng();
+    let mut e = Enigo::new();
+    e.key_down(Key::Return);
+
     loop {
         let foreground_color = get_random_color(&mut rng);
         let background_color = get_random_color(&mut rng);
