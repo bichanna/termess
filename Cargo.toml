@@ -3,6 +3,10 @@ name = "termess"
 version = "0.1.0"
 edition = "2021"
 repository = "https://github.com/bichanna/termess"
+authors = ["Nobuharu Shimazu <nobu.bichanna@gmail.com>"]
+description = "Will mess your terminal"
+license-file = "LICENSE"
+license = "MIT"
 
 [dependencies]
 crossterm = "0.27.0"
